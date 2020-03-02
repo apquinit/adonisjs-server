@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - 12
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - npm install -g @adonisjs/cli
+
+install:
+  - npm install
+
+script:
+  - cp .env.example .env
+  - adonis key:generate
+  - npm run lint
+  - npm run test
+
+notifications:
+  slack: twala-io:lQC4B14W0VvjzegiAcVf4XqB

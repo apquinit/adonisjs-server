@@ -1,6 +1,6 @@
 # AdonisJs Template
 
-[![Build Status](https://travis-ci.org/twala-io/template-adonisjs.svg?branch=master)](https://travis-ci.org/twala-io/template-adonisjs)
+![Node.js CI](https://github.com/apquinit/template-adonisjs/workflows/Node.js%20CI/badge.svg)
 
 Template for AdonisJs projects.
 

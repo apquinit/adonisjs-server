@@ -10,6 +10,8 @@ services:
       - $PWD:/var/www
     depends_on:
       - database
+    networks:
+      - network
 
   database:
     container_name: adonisjs-server_database
@@ -22,3 +24,9 @@ services:
       POSTGRES_USER: adonisjs
       POSTGRES_PASSWORD: secret
       POSTGRES_DB: adonisjs
+    networks:
+      - network
+
+networks:
+  network:
+    driver: bridge

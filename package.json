@@ -1,13 +1,15 @@
 {
   "name": "template-adonisjs",
-  "version": "4.1.0",
+  "version": "0.0.0",
   "adonis-version": "4.1.0",
   "description": "AdonisJs template for twala projects.",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint . --ext .js",
     "test": "node ace test",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku:migrate": "ENV_SILENT=true node ace migration:run --force && ENV_SILENT=true node ace seed --force",
+    "heroku:start": "ENV_SILENT=true npm start"
   },
   "keywords": [
     "adonisjs",

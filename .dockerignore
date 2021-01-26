@@ -1,0 +1,17 @@
+.git
+.github
+database/pg
+database/*.sqlite
+node_modules
+test
+tmp
+.dockerignore
+.editorconfig
+.env
+.env.example
+.env.testing
+.eslintignore
+.eslintrc.yml
+.gitignore
+docker-compose.yml
+Dockerfile

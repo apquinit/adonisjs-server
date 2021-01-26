@@ -1,8 +1,8 @@
-# AdonisJs Template
+# AdonisJs Server
 
-![Node.js CI](https://github.com/apquinit/template-adonisjs/workflows/Node.js%20CI/badge.svg)
+![Node.js CI](https://github.com/apquinit/adonisjs-server/workflows/Node.js%20CI/badge.svg)
 
-Template for AdonisJs projects.
+AdonisJs Server.
 
 ## Requirements
 
@@ -16,7 +16,7 @@ Template for AdonisJs projects.
 Clone the repository.
 
 ```bash
-git clone https://github.com/twala-io/template-adonisjs.git && cd template-adonisjs
+git clone https://github.com/apquinit/adonisjs-server && cd adonisjs-server
 ```
 
 Install AdonisJs.

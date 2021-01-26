@@ -1,10 +1,10 @@
 'use strict'
 
-const { test, trait } = use('Test/Suite')('HomeController')
+const { test, trait } = use('Test/Suite')('HealthController')
 
 trait('Test/ApiClient')
 
-test('home', async ({ client }) => {
+test('health', async ({ client }) => {
 
   const response = await client.get('/').end()
 

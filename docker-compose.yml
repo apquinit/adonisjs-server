@@ -21,9 +21,9 @@ services:
     volumes:
       - $PWD/database/pg:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: adonisjs
-      POSTGRES_PASSWORD: secret
-      POSTGRES_DB: adonisjs
+      POSTGRES_USER: db_admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: adonisjs_local
     networks:
       - network
 

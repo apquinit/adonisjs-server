@@ -16,5 +16,5 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-/** Home */
-Route.get('/', 'HomeController.index').middleware('guest')
+/** Health */
+Route.get('/', 'HealthController.index').middleware('guest')

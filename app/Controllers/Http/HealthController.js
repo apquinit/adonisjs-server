@@ -2,7 +2,7 @@
 
 const Config = use('Config')
 
-class HomeController {
+class HealthController {
   async index () {
     return {
       name: Config.get('app.name'),
@@ -11,4 +11,4 @@ class HomeController {
   }
 }
 
-module.exports = HomeController
+module.exports = HealthController

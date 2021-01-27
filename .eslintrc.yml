@@ -13,6 +13,12 @@ rules:
   linebreak-style:
     - error
     - unix
+  semi:
+    - error
+    - always
   quotes:
     - error
     - single
+  eol-last:
+    - error
+    - always

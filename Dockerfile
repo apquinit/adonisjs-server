@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:14
 LABEL maintainer="Alexander Paul P. Quinit <paulquinit@gmail.com>"
 
 RUN mkdir -p /var/www/app/node_modules && chown -R node:node /var/www

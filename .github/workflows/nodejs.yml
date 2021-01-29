@@ -29,5 +29,4 @@ jobs:
     - run: npm install
     - run: cp .env.example .env
     - run: adonis key:generate
-    - run: npm run lint
     - run: npm run test

@@ -1,5 +1,7 @@
-database/pg
-database/*.sqlite
 node_modules
-tmp
+build
+coverage
+.vscode
+.DS_STORE
 .env
+tmp

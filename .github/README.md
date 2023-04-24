@@ -80,3 +80,17 @@ Run tests.
 ```bash
 npm run test
 ```
+
+### Compile
+
+Run build.
+
+```bash
+node ace build --production
+```
+
+The compiled output is written to the build folder. You can cd into this folder and start the server by directly running the server.js file. This is the recommended way to run the application in production.
+
+```bash
+cd build && node server.js
+```

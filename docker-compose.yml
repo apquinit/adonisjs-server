@@ -1,32 +1,47 @@
-version: '3'
+version: '3.8'
 
 services:
-  app:
-    container_name: adonisjs-server_app
-    image: apquinit/adonisjs:latest
-    ports:
-      - '3333:3333'
+  postgres:
+    container_name: postgres
+    image: postgres:15
     volumes:
-      - $PWD:/var/www
-    depends_on:
-      - database
-    networks:
-      - network
-
-  database:
-    container_name: adonisjs-server_database
-    image: postgres:12.0
-    ports:
-      - '5432:5432'
-    volumes:
-      - $PWD/database/pg:/var/lib/postgresql/data
+      - postgres_volume:/var/lib/postgresql/data
+      - ./docker/postgres-dev-init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
-      POSTGRES_USER: db_admin
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: adonisjs_local
-    networks:
-      - network
+      POSTGRES_USER: adonis
+      POSTGRES_PASSWORD: adonis
+    ports:
+      - 5432:5432
 
-networks:
-  network:
-    driver: bridge
+  redis:
+    container_name: redis
+    image: redis:7-alpine
+    volumes:
+      - redis_volume:/data
+    ports:
+      - 6379:6379
+
+  app:
+    container_name: app
+    restart: always
+    depends_on:
+      - postgres
+      - redis
+    build:
+      context: .
+      target: dependencies
+    ports:
+      - ${PORT}:${PORT}
+      - 9229:9229
+    env_file:
+      - .env
+    environment:
+      - PG_HOST=postgres
+      - REDIS_HOST=redis
+    volumes:
+      - ./:/home/node/app
+    command: dumb-init node ace serve --watch --node-args="--inspect=0.0.0.0"
+
+volumes:
+  postgres_volume:
+  redis_volume:

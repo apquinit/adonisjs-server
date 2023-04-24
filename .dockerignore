@@ -1,17 +1,19 @@
-.git
-.github
-database/pg
-database/*.sqlite
+# Adonis default .gitignore ignores
 node_modules
-test
-tmp
-.dockerignore
-.editorconfig
+build
+coverage
+.vscode
+.DS_STORE
 .env
-.env.example
-.env.testing
-.eslintignore
-.eslintrc.yml
+tmp
+
+# Additional .gitignore ignores (any custom file you wish)
+.idea
+
+# Additional good to have ignores for dockerignore
+Dockerfile*
+docker-compose*
+.dockerignore
+*.md
+.git
 .gitignore
-docker-compose.yml
-Dockerfile

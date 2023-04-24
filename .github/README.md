@@ -1,7 +1,5 @@
 # AdonisJs Server
 
-![Node.js CI](https://github.com/apquinit/adonisjs-server/workflows/Node.js%20CI/badge.svg)
-
 AdonisJs Server.
 
 ## Requirements
